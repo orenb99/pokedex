@@ -1,6 +1,6 @@
 const Type = (props) => (
-  <span className={`type-span ${props.Type}`}>
-    <h3>{props.type}</h3>
+  <span className={`type-span ${props.type}`}>
+    <h2>{props.type}</h2>
   </span>
 );
 

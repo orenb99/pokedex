@@ -1,1 +1,84 @@
-/* No CSS *//*# sourceMappingURL=App.css.map */
+.type-span {
+  position: relative;
+  margin: 10px;
+  padding: 7px 10px 7px 10px;
+  border-radius: 13px;
+  color: white;
+  border: solid black 1px;
+}
+
+.type-span h2 {
+  display: inline;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #797169;
+  text-transform: uppercase;
+}
+
+.type-span.fighting {
+  background-color: #c02f27;
+}
+
+.type-span.fire {
+  background-color: #f17f2e;
+}
+
+.type-span.ghost {
+  background-color: #715799;
+}
+
+.type-span.electric {
+  background-color: #ffd72b;
+}
+
+.type-span.normal {
+  background-color: #b8b8d0;
+}
+
+.type-span.bug {
+  background-color: #a8b820;
+}
+
+.type-span.flying {
+  background-color: #a990f1;
+}
+
+.type-span.steel {
+  background-color: #b8b8d0;
+}
+
+.type-span.psychic {
+  background-color: #f95788;
+}
+
+.type-span.poison {
+  background-color: #9f3ea0;
+}
+
+.type-span.ice {
+  background-color: #98d9d9;
+}
+
+.type-span.ground {
+  background-color: #e9cc72;
+}
+
+.type-span.water {
+  background-color: #6890f0;
+}
+
+.type-span.dragon {
+  background-color: #6f36fb;
+}
+
+.type-span.rock {
+  background-color: #b89f38;
+}
+
+.type-span.grass {
+  background-color: #78c850;
+}
+
+.type-span.dark {
+  background-color: #705948;
+}
+/*# sourceMappingURL=App.css.map */
