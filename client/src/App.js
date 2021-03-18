@@ -1,8 +1,5 @@
-import './App.css';
-
-function App() {
-  return (
-  );
-}
+import "./App.css";
+import axios from "axios";
+function App() {}
 
 export default App;
