@@ -10,7 +10,7 @@ collection.get("/", (req, res) => {
   else res.status(200).send(ourCollection);
 });
 
-collection.post("/catch", (req, res) => {
+collection.post("/catch/", (req, res) => {
   const { body } = req;
   try {
     ourCollection.push(body);
