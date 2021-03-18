@@ -1,0 +1,6 @@
+PokeAPI (Big Database) -Dedicated Server - Dedicated Database - Front End Client
+Type + Pokemon (id & name) Get Routes -> Dedicated Server -> PokeAPI Data -> Filter Data-> Saved in Dedicated Database    
+Collection Route ->Dedicated Server-> Dedicated Database 
+Post Route ->Dedicated Server-> Dedicated Database 
+Delete Route ->Dedicated Server-> Dedicated Database 
+                  
