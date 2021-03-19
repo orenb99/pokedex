@@ -28,18 +28,27 @@ function App() {
     setInput(newInput);
   }
 
-  function catchPokemon() {
+  function catchAndRelease() {
     axios
-      .post(route + "collection/catch", pokemon)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
+      .get(route + "collection")
+      .then((collection) => {
+        let data = [...collection.data];
+        const idArray = data.map((value) => value.id);
+        if (!idArray.includes(pokemon.id)) {
+          axios
+            .post(route + "collection/catch", pokemon)
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err.message));
+        } else {
+          axios
+            .delete(route + "collection/release/" + pokemon.name)
+            .then((res) => console.log(res.data))
+            .catch((err) => console.log(err.message));
+        }
+      })
+      .catch((err) => console.log(err.message));
   }
-  function releasePokemon() {
-    axios
-      .delete(route + "collection/release/:" + pokemon.id)
-      .then((res) => console.log(res))
-      .catch((err) => console.log(err));
-  }
+
   return (
     <div>
       <h1>Pokedex</h1>
@@ -48,7 +57,7 @@ function App() {
         changeInput={changeInput}
         valid={validate}
       />
-      <Info pokemon={pokemon} catchHandler={catchPokemon} />
+      <Info pokemon={pokemon} catchHandler={catchAndRelease} />
     </div>
   );
 }

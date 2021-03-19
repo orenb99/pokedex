@@ -2,7 +2,7 @@ const { Router } = require("express");
 
 const collection = Router();
 
-const ourCollection = [];
+let ourCollection = [];
 
 collection.get("/", (req, res) => {
   if (ourCollection.length === 0)
@@ -20,13 +20,15 @@ collection.post("/catch/", (req, res) => {
   }
 });
 
-collection.delete("/release/:id", (req, res) => {
-  const { id } = req.params;
-  const filteredCollection = ourCollection.filter((value) => value.id !== id);
+collection.delete("/release/:name", (req, res) => {
+  const { name } = req.params;
+  const filteredCollection = ourCollection.filter(
+    (value) => value.name !== name
+  );
   if (ourCollection.length === filteredCollection.length)
     return res.status(400).send("Invalid Id");
   ourCollection = filteredCollection;
-  res.status(200).send("Pokemon released");
+  res.status(200).send(name + " released!");
 });
 
 module.exports = collection;
