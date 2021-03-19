@@ -5,3 +5,4 @@ const Type = (props) => (
 );
 
 export default Type;
+

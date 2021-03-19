@@ -1,10 +1,25 @@
-import List from "./List";
-
+import Image from "./Image";
+import Type from "./Type";
 const Info = ({ pokemon }) => {
-  const { name, weight, height, types } = pokemon;
+  const { name, weight, height, types, pictures } = pokemon;
   return (
-    <div>
-      <List name={name} weight={weight} height={height} types={types} />
+    <div className="list-block">
+      <ul>
+        <li>Name: {name}</li>
+        <li>Height: {height}</li>
+        <li>Weight: {weight}</li>
+        <li>
+          <span>Types: </span>
+          <span>
+            {types.map((type) => (
+              <Type type={type} />
+            ))}
+          </span>
+        </li>
+      </ul>
+      {name !== "" && (
+        <Image front={pictures["front"]} back={pictures["back"]} />
+      )}
     </div>
   );
 };
