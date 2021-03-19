@@ -1,11 +1,18 @@
 import Type from "./Type";
-const List = () => (
+const List = (props) => (
   <div className="list-block">
     <ul>
-      <li>Name: </li>
-      <li>Height: </li>
-      <li>Weight: </li>
-      <li>Types: </li>
+      <li>Name: {props.name}</li>
+      <li>Height: {props.height}</li>
+      <li>Weight: {props.weight}</li>
+      <li>
+        <span>Types: </span>
+        <span>
+          {props.types.map((type) => (
+            <Type type={type} />
+          ))}
+        </span>
+      </li>
     </ul>
   </div>
 );

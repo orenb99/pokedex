@@ -1,12 +1,11 @@
-import Type from "./Type";
-import Search from "./Search";
 import List from "./List";
 
-const Info = (props) => (
-  <div>
-    <h1>Pokedex</h1>
-    <Search />
-    <List />
-  </div>
-);
+const Info = ({ pokemon }) => {
+  const { name, weight, height, types } = pokemon;
+  return (
+    <div>
+      <List name={name} weight={weight} height={height} types={types} />
+    </div>
+  );
+};
 export default Info;
