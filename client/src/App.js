@@ -2,6 +2,8 @@ import "./Styles/App.css";
 import { useState } from "react";
 import Info from "./components/Info";
 import Search from "./components/Search";
+import List from "./components/List";
+
 const axios = require("axios");
 const route = "http://localhost:3001/api/";
 function App() {
@@ -13,6 +15,7 @@ function App() {
     types: [],
   });
   const [validate, isValid] = useState(true);
+  const [shownType, changeType] = useState([]);
 
   function changePokemon(input) {
     axios
@@ -49,6 +52,22 @@ function App() {
       .catch((err) => console.log(err.message));
   }
 
+  function expandType(type) {
+    axios
+      .get(route + "type/" + type)
+      .then((res) => {
+        changeType(res.data);
+      })
+      .catch((err) => console.log(err.message));
+  }
+
+  function changeShownType(newType) {
+    axios
+      .get(route + "type/" + newType)
+      .then(() => expandType(newType))
+      .catch((err) => console.log(err));
+  }
+
   return (
     <div>
       <h1>Pokedex</h1>
@@ -57,7 +76,12 @@ function App() {
         changeInput={changeInput}
         valid={validate}
       />
-      <Info pokemon={pokemon} catchHandler={catchAndRelease} />
+      <Info
+        pokemon={pokemon}
+        catchHandler={catchAndRelease}
+        changeType={changeShownType}
+      />
+      <List pokemon={shownType} />
     </div>
   );
 }

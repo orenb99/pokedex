@@ -1,6 +1,6 @@
 import Image from "./Image";
 import Type from "./Type";
-const Info = ({ pokemon, catchHandler, caught }) => {
+const Info = ({ pokemon, catchHandler, changeType }) => {
   const { name, weight, height, types, pictures } = pokemon;
   return (
     <div className="list-block">
@@ -12,7 +12,7 @@ const Info = ({ pokemon, catchHandler, caught }) => {
           <span>Types: </span>
           <span>
             {types.map((type) => (
-              <Type key={type} type={type} />
+              <Type key={type} type={type} changeType={changeType} />
             ))}
           </span>
         </li>
