@@ -12,7 +12,8 @@ function App() {
     height: "",
     types: [],
   });
-  let [validate, isValid] = useState(true);
+  const [validate, isValid] = useState(true);
+
   function changePokemon(input) {
     axios
       .get(route + "pokemon/" + input)
@@ -22,8 +23,22 @@ function App() {
       })
       .catch((err) => isValid(false));
   }
+
   function changeInput(newInput) {
     setInput(newInput);
+  }
+
+  function catchPokemon() {
+    axios
+      .post(route + "collection/catch", pokemon)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
+  }
+  function releasePokemon() {
+    axios
+      .delete(route + "collection/release/:" + pokemon.id)
+      .then((res) => console.log(res))
+      .catch((err) => console.log(err));
   }
   return (
     <div>
@@ -33,7 +48,7 @@ function App() {
         changeInput={changeInput}
         valid={validate}
       />
-      <Info pokemon={pokemon} />
+      <Info pokemon={pokemon} catchHandler={catchPokemon} />
     </div>
   );
 }
