@@ -81,7 +81,7 @@ function App() {
         catchHandler={catchAndRelease}
         changeType={changeShownType}
       />
-      <List pokemon={shownType} />
+      <List pokemon={shownType} change={changePokemon} />
     </div>
   );
 }
