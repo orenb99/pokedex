@@ -8,9 +8,12 @@ Delete Route ->Dedicated Server-> Dedicated Database
 Shit left to do:
     changing the button text from catch to release if pokemon is caught
 
-    Type expand (with icons)
+    adding icons to the expanding type list
 
     show Collection
 
-    Styling
+    styling
                   
+    fix slow time to render
+
+    using external Database
