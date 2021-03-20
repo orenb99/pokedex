@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "PKMN RBYGSC";
+  src: url("PKMN-RBYGSC.eot");
+  src: url("PKMN-RBYGSC.eot?#iefix") format("embedded-opentype"),
+    url("PKMN-RBYGSC.woff2") format("woff2"),
+    url("PKMN-RBYGSC.woff") format("woff"),
+    url("PKMN-RBYGSC.ttf") format("truetype"),
+    url("PKMN-RBYGSC.svg#PKMN-RBYGSC") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family: "PKMN RBYGSC";
+}
+#root {
+  background-image: url(../Pokedex\ Background.jpg);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
