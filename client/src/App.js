@@ -74,7 +74,6 @@ function App() {
       <h1>Pokedex</h1>
       <Search
         handler={changePokemon} // Have to pass the handler to an HTML element.
-        // changeInput={changeInput} // Moving into Search component
         valid={validate}
       />
       <Info
