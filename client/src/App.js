@@ -1,6 +1,6 @@
 import "./Styles/App.css";
 import "./Styles/fonts/stylesheet.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Info from "./components/Info";
 import Search from "./components/Search";
 import List from "./components/List";
@@ -15,6 +15,8 @@ function App() {
     height: "",
     types: [],
   });
+
+  const [collection, setCollection] = useState([]);
   const [validate, isValid] = useState(true);
   const [shownType, changeType] = useState([]);
 
@@ -31,7 +33,7 @@ function App() {
   // function changeInput(newInput) {
   //   setInput(newInput);
   // }
-
+  useEffect(() => showCollection());
   function catchAndRelease() {
     axios
       .get(route + "collection")
@@ -41,12 +43,16 @@ function App() {
         if (!idArray.includes(pokemon.id)) {
           axios
             .post(route + "collection/catch", pokemon)
-            .then((res) => console.log(res.data))
+            .then((res) => {
+              console.log(res.data);
+            })
             .catch((err) => console.log(err.message));
         } else {
           axios
             .delete(route + "collection/release/" + pokemon.name)
-            .then((res) => console.log(res.data))
+            .then((res) => {
+              console.log(res.data);
+            })
             .catch((err) => console.log(err.message));
         }
       })
@@ -66,7 +72,17 @@ function App() {
     axios
       .get(route + "type/" + newType)
       .then(() => expandType(newType))
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err.message));
+  }
+
+  function showCollection() {
+    axios
+      .get(route + "collection")
+      .then((res) => {
+        setCollection(res.data);
+        
+      })
+      .catch((err) => console.log(err.message));
   }
 
   return (
@@ -82,7 +98,12 @@ function App() {
         catchHandler={catchAndRelease}
         changeType={changeShownType}
       />
-      <List pokemon={shownType} change={changePokemon} />
+      <List class="types-list" pokemon={shownType} change={changePokemon} />
+      <List
+        class="collection-list"
+        pokemon={collection}
+        change={changePokemon}
+      />
     </div>
   );
 }
