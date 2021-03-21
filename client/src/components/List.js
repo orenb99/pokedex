@@ -27,5 +27,3 @@ const List = (props) => {
 };
 
 export default List;
-// props [asdds,sdfsdf,sdfsdf]
-//props []

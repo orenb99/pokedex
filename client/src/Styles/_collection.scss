@@ -1,5 +1,24 @@
 .collection-list {
   position: absolute;
-  top: 0%;
+  top: 60%;
   left: 50%;
+}
+.types-list {
+  position: absolute;
+  left: 45%;
+  top: 0%;
+  overflow: auto;
+  height: 50vh;
+  width: 40vw;
+  margin: 50px;
+}
+.list-item {
+  background-color: blue;
+  text-transform: uppercase;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border: solid 3px;
+  border-color: black;
+  border-radius: 10px;
 }
