@@ -6,7 +6,7 @@ import Search from "./components/Search";
 import List from "./components/List";
 
 const axios = require("axios");
-const route = "http://localhost:3001/api/";
+const route = "/api/";
 function App() {
   const [pokemon, setPokemon] = useState({
     name: "",
@@ -106,7 +106,11 @@ function App() {
           caught={caughtPokemon}
         />
       </div>
-      <List class="types-list" pokemon={shownType} change={changePokemon} />
+      <List
+        class="types-list"
+        pokemon={shownType}
+        change={changePokemon}
+      />
       <List
         class="collection-list"
         pokemon={collection}
