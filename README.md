@@ -77,3 +77,10 @@ Bonus:
 - Add a link to the deployment to your repo
 - Submit a link to your github repo to the CRM (each pair submits the **same** link)
 
+
+
+https://pokedexsmalla.herokuapp.com/
+Its a Work in progress, we'll continue working on it regardless. Feels very old school pokemon, lots of more features to implement. Hope you enjoy! 
+
+
+
