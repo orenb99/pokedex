@@ -5,6 +5,7 @@ const collection = Router();
 let ourCollection = [];
 
 collection.get("/", (req, res) => {
+  console.log(ourCollection);
   if (ourCollection.length === 0)
     res.status(200).send("The collection is empty");
   else res.status(200).send(ourCollection);

@@ -1,7 +1,7 @@
 const ListItem = (props) => (
-  <span className="list-item" onClick={() => props.change(props.name)}>
-    {/* <img className="icon" alt="" /> */}
-    <p>{props.name}</p>
-  </span>
+  <div className="list-item" onClick={() => props.change(props.name)}>
+    <img className="icon" src={props.img} alt="" />
+    <span>{props.name}</span>
+  </div>
 );
 export default ListItem;

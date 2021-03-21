@@ -11,7 +11,7 @@ const Image = (props) => (
         props.catch();
       }}
     >
-      catch
+      {props.caught(props.name)}
     </button>
   </div>
 );

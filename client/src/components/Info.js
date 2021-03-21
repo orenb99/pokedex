@@ -1,6 +1,6 @@
 import Image from "./Image";
 import Type from "./Type";
-const Info = ({ pokemon, catchHandler, changeType }) => {
+const Info = ({ pokemon, catchHandler, changeType, caught }) => {
   const { name, weight, height, types, pictures } = pokemon;
   return (
     <div className="list-block">
@@ -22,6 +22,8 @@ const Info = ({ pokemon, catchHandler, changeType }) => {
           catch={catchHandler}
           front={pictures["front"]}
           back={pictures["back"]}
+          caught={caught}
+          name={name}
         />
       )}
     </div>

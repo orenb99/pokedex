@@ -6,12 +6,10 @@ Delete Route ->Dedicated Server-> Dedicated Database
 
 
 Shit left to do:
-    changing the button text from catch to release if pokemon is caught
 
-    adding icons to the list items
 
     styling
                   
     fix slow time to render (multiple http requests)
 
-    using external Database
+    heroku

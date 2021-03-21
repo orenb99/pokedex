@@ -38,7 +38,7 @@ function showPokemonByType(type) {
       return pokemon.map((value) => value.pokemon.name);
     })
     .catch((e) => {
-      return "Type nof found";
+      return "Type not found";
     });
 }
 

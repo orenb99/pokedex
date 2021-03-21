@@ -7,7 +7,8 @@ type.get("/:type", async (req, res) => {
   let { type } = req.params;
   type = type.toLowerCase();
   let pokemons = await utils.showPokemonByType(type);
-  if (typeof pokemons === "string") return res.status(404).send(pokemons);
+  if (typeof pokemons === "string")
+    return res.status(404).send(pokemons);
   res.status(200).send(pokemons);
 });
 

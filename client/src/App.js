@@ -8,7 +8,6 @@ import List from "./components/List";
 const axios = require("axios");
 const route = "http://localhost:3001/api/";
 function App() {
-  // const [input, setInput] = useState("");// Put input state inside Search locally, retrieve outwards only to search
   const [pokemon, setPokemon] = useState({
     name: "",
     weight: "",
@@ -20,6 +19,18 @@ function App() {
   const [validate, isValid] = useState(true);
   const [shownType, changeType] = useState([]);
 
+  useEffect(() => showCollection(), []);
+
+  function caughtPokemon(pokemonName) {
+    if (
+      collection.find(
+        (collectionPokemon) => collectionPokemon.name === pokemonName
+      )
+    ) {
+      return "release";
+    } else return "catch";
+  }
+
   function changePokemon(input) {
     axios
       .get(route + "pokemon/" + input)
@@ -29,22 +40,19 @@ function App() {
       })
       .catch((err) => isValid(false));
   }
-  // No need for helper function, putting state inside Search component + No extra logic happening.
-  // function changeInput(newInput) {
-  //   setInput(newInput);
-  // }
-  useEffect(() => showCollection());
+
   function catchAndRelease() {
     axios
       .get(route + "collection")
       .then((collection) => {
-        let data = [...collection.data]; // spread operator makes deep copy ONLY if data is not nested (Types is nested?) Not sure types wil be copied
+        let data = [...collection.data];
         const idArray = data.map((value) => value.id);
         if (!idArray.includes(pokemon.id)) {
           axios
             .post(route + "collection/catch", pokemon)
             .then((res) => {
               console.log(res.data);
+              showCollection();
             })
             .catch((err) => console.log(err.message));
         } else {
@@ -52,6 +60,7 @@ function App() {
             .delete(route + "collection/release/" + pokemon.name)
             .then((res) => {
               console.log(res.data);
+              showCollection();
             })
             .catch((err) => console.log(err.message));
         }
@@ -80,7 +89,6 @@ function App() {
       .get(route + "collection")
       .then((res) => {
         setCollection(res.data);
-        
       })
       .catch((err) => console.log(err.message));
   }
@@ -88,16 +96,18 @@ function App() {
   return (
     <div>
       <h1>Pokedex</h1>
-      <Search
-        handler={changePokemon} // Have to pass the handler to an HTML element.
-        valid={validate}
-      />
+      <Search handler={changePokemon} valid={validate} />
       <Info
         pokemon={pokemon}
         catchHandler={catchAndRelease}
         changeType={changeShownType}
+        caught={caughtPokemon}
       />
-      <List class="types-list" pokemon={shownType} change={changePokemon} />
+      <List
+        class="types-list"
+        pokemon={shownType}
+        change={changePokemon}
+      />
       <List
         class="collection-list"
         pokemon={collection}
