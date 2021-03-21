@@ -3,20 +3,7 @@ import Type from "./Type";
 const Info = ({ pokemon, catchHandler, changeType, caught }) => {
   const { name, weight, height, types, pictures } = pokemon;
   return (
-    <div className="list-block">
-      <ul>
-        <li>Name: {name}</li>
-        <li>Height: {height}</li>
-        <li>Weight: {weight}</li>
-        <li>
-          <span>Types: </span>
-          <span>
-            {types.map((type) => (
-              <Type key={type} type={type} changeType={changeType} />
-            ))}
-          </span>
-        </li>
-      </ul>
+    <div className="info-block">
       {name !== "" && (
         <Image
           catch={catchHandler}
@@ -26,6 +13,14 @@ const Info = ({ pokemon, catchHandler, changeType, caught }) => {
           name={name}
         />
       )}
+      <h3 className="info-name">{name}</h3>
+      <span className="info-types">
+        {types.map((type) => (
+          <Type key={type} type={type} changeType={changeType} />
+        ))}
+      </span>
+      <h2 className="info-height">{"HEIGHT: " + height}</h2>
+      <h2 className="info-weight">{"WEIGHT: " + weight}</h2>
     </div>
   );
 };

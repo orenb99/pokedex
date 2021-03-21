@@ -1,5 +1,5 @@
 import "./Styles/App.css";
-import "./Styles/fonts/stylesheet.css";
+import "./Styles/fonts/font.css";
 import { useState, useEffect } from "react";
 import Info from "./components/Info";
 import Search from "./components/Search";
@@ -95,15 +95,17 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Pokedex</h1>
-      <Search handler={changePokemon} valid={validate} />
-      <Info
-        pokemon={pokemon}
-        catchHandler={catchAndRelease}
-        changeType={changeShownType}
-        caught={caughtPokemon}
-      />
+    <div className="app">
+      <div className="gameboy-div">
+        <h1>Pokedex</h1>
+        <Search handler={changePokemon} valid={validate} />
+        <Info
+          pokemon={pokemon}
+          catchHandler={catchAndRelease}
+          changeType={changeShownType}
+          caught={caughtPokemon}
+        />
+      </div>
       <List class="types-list" pokemon={shownType} change={changePokemon} />
       <List
         class="collection-list"

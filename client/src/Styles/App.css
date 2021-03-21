@@ -82,7 +82,57 @@
   background-color: #705948;
 }
 
+.info-block > * {
+  position: absolute;
+}
+
+.info-name {
+  text-transform: uppercase;
+  top: 95%;
+  left: 7%;
+}
+
+.info-types {
+  top: 96.5%;
+  left: 20%;
+}
+
+.img-div {
+  top: 27%;
+  left: 7%;
+}
+
+.info-img {
+  width: 400%;
+  height: 400%;
+  max-width: 550px;
+  max-height: 550px;
+}
+
+.info-height {
+  top: 102%;
+  left: 15%;
+}
+
+.info-weight {
+  top: 112%;
+  left: 15%;
+}
+
 .collection-list {
-  float: right;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+}
+
+.gameboy-div {
+  background-image: url("../Styles/Pokedex Background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+  width: 750px;
+  margin: 50px;
+  text-align: center;
 }
 /*# sourceMappingURL=App.css.map */

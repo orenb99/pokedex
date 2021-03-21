@@ -1,4 +1,14 @@
 @import "_Type";
-.collection-list {
-  float: right;
+@import "_info";
+@import "_collection";
+
+.gameboy-div {
+  background-image: url("../Styles/Pokedex\ Background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 120vh;
+  width: 750px;
+  margin: 50px;
+  text-align: center;
 }

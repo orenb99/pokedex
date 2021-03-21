@@ -5,12 +5,7 @@ const List = (props) => {
       return (
         <div className={props.class}>
           {props.pokemon.map((item) => (
-            <ListItem
-              key={item}
-              name={item}
-              change={props.change}
-              // img={item.pictures.icon}
-            />
+            <ListItem key={item} name={item} change={props.change} />
           ))}
         </div>
       );
