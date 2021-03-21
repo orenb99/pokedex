@@ -6,8 +6,7 @@ let ourCollection = [];
 
 collection.get("/", (req, res) => {
   console.log(ourCollection);
-  if (ourCollection.length === 0)
-    res.status(200).send("The collection is empty");
+  if (ourCollection.length === 0) res.status(200).send([]);
   else res.status(200).send(ourCollection);
 });
 

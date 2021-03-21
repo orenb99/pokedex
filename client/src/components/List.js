@@ -1,6 +1,5 @@
 import ListItem from "./ListItem";
 const List = (props) => {
-  console.log(props.pokemon);
   if (Array.isArray(props.pokemon) && props.pokemon.length > 0) {
     if (props.class === "types-list")
       return (

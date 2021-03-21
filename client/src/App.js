@@ -22,6 +22,7 @@ function App() {
   useEffect(() => showCollection(), []);
 
   function caughtPokemon(pokemonName) {
+    console.log(collection);
     if (
       collection.find(
         (collectionPokemon) => collectionPokemon.name === pokemonName
@@ -103,11 +104,7 @@ function App() {
         changeType={changeShownType}
         caught={caughtPokemon}
       />
-      <List
-        class="types-list"
-        pokemon={shownType}
-        change={changePokemon}
-      />
+      <List class="types-list" pokemon={shownType} change={changePokemon} />
       <List
         class="collection-list"
         pokemon={collection}
