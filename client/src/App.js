@@ -7,7 +7,7 @@ import List from "./components/List";
 import Gameboy from "./components/Gamboy";
 
 const axios = require("axios");
-const route = "http://localhost:3001/api/";
+const route = "/api/";
 function App() {
   const [pokemon, setPokemon] = useState({
     name: "",
@@ -115,7 +115,11 @@ function App() {
         changeType={changeShownType}
         caught={caughtPokemon}
       />
-      <List class="types-list" pokemon={shownType} change={changePokemon} />
+      <List
+        class="types-list"
+        pokemon={shownType}
+        change={changePokemon}
+      />
       <List
         class="collection-list"
         pokemon={collection}
