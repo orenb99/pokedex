@@ -121,7 +121,7 @@
   height: -moz-fit-content;
   height: fit-content;
   text-align: center;
-  margin: 50px;
+  margin: 10px 0px 10px 50px;
 }
 
 .search-div {
@@ -154,12 +154,12 @@
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
+  border-width: 5px;
   position: relative;
   background-color: whitesmoke;
   left: 10%;
   width: 80%;
   height: 40vh;
-  margin-top: 5%;
 }
 
 .info-img {
@@ -190,6 +190,18 @@
   height: 60px;
 }
 
+.combined-info {
+  border: black 2.5px solid;
+  border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+  width: 90%;
+  margin: 3%;
+  background-color: #636363;
+}
+
 .first-info {
   border: black 2.5px solid;
   border-radius: 15px;
@@ -198,11 +210,9 @@
   min-width: fit-content;
   position: relative;
   min-height: 120px;
-  background-color: whitesmoke;
-  left: 10%;
+  background-color: #8dc73f;
   width: 80%;
-  height: 8vh;
-  margin-top: 10%;
+  margin: 3% 10% 0 10%;
 }
 
 .first-info > h3 {
@@ -222,16 +232,22 @@
   min-width: -moz-fit-content;
   min-width: fit-content;
   position: relative;
-  background-color: whitesmoke;
+  background-color: #8dc73f;
   width: 50%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  left: 25%;
-  margin: 5% 0 5% 0;
+  margin: 3% 25% 3% 25%;
 }
 
 body {
   background-color: #000058;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    background-color: white;
+  }
+  .gameboy-div {
+    margin: 10px 25vw 10px 25vw;
+    width: 50vw;
+  }
 }
 /*# sourceMappingURL=App.css.map */
