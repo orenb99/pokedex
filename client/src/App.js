@@ -17,9 +17,8 @@ function App() {
   const [collection, setCollection] = useState([]);
   const [validate, isValid] = useState(true);
   const [shownType, changeType] = useState([]);
-
+  // const [shownTypeIcons, setShownTypeIcons] = useState([]);
   useEffect(() => showCollection(), []);
-
   function caughtPokemon(pokemonName) {
     console.log(collection);
     if (
@@ -92,17 +91,14 @@ function App() {
       })
       .catch((err) => console.log(err.message));
   }
-
-  async function getIconByType() {
-    return await Promise.all(
-      shownType.map(async (value) => {
-        const pokemon = await axios.get(`${route}/pokemon/${value}`);
-        // return pokemon.data.sprites.versions['generation-viii'].icons.front_default
-        console.log(pokemon);
-        return;
-      })
-    );
-  }
+  // async function getIconByType() {
+  //   return await Promise.all(
+  //     shownType.map(async (value) => {
+  //       const pokemon = await axios.get(`${route}/pokemon/${value}`);
+  //       return pokemon.data.pictures.icon;
+  //     })
+  //   );
+  // }
 
   return (
     <div className="app">
@@ -114,7 +110,11 @@ function App() {
         changeType={changeShownType}
         caught={caughtPokemon}
       />
-      <List class="types-list" pokemon={shownType} change={changePokemon} />
+      <List
+        class="types-list"
+        pokemon={shownType}
+        change={changePokemon}
+      />
       <List
         class="collection-list"
         pokemon={collection}
