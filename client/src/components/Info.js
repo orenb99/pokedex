@@ -4,7 +4,7 @@ const Info = ({ pokemon, catchHandler, changeType, caught }) => {
   const { name, weight, height, types, pictures } = pokemon;
   return (
     <div className="info-block">
-      {name !== "" && (
+      {name !== "" && name !== undefined && (
         <Image
           catch={catchHandler}
           front={pictures["front"]}

@@ -1,0 +1,31 @@
+@mixin border {
+  border: black 2px solid;
+  border-radius: 15px;
+}
+
+.gameboy-div {
+  @include border();
+  position: relative;
+  background-color: rgb(212, 45, 45);
+  width: 35vw;
+  height: 80vh;
+  text-align: center;
+  left: 10%;
+}
+.search-div {
+  @include border();
+  position: relative;
+  background-color: white;
+  width: 80%;
+  left: 10%;
+  height: 10%;
+  padding: 1% 0 1% 0;
+  & > input {
+    @include border();
+    margin-right: 2%;
+  }
+  & > button {
+    @include border();
+    padding: 5px;
+  }
+}

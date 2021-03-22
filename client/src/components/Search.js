@@ -2,13 +2,17 @@ import { useState } from "react";
 const Search = (props) => {
   const [input, setInput] = useState("");
   return (
-    <span className="search-span">
-      <p>{props.valid === false ? "Pokemon not found" : ""}</p>
+    <div className="search-div">
       <input onChange={(e) => setInput(e.target.value)} type="text" />
-      <button onClick={() => props.handler(input)}>
+      <button
+        onClick={() => {
+          if (input) return props.handler(input);
+        }}
+      >
         search pokemon
       </button>
-    </span>
+      <p>{props.valid === false ? "Pokemon not found" : ""}</p>
+    </div>
   );
 };
 

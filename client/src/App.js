@@ -1,12 +1,11 @@
 import "./Styles/App.css";
 import "./Styles/fonts/font.css";
 import { useState, useEffect } from "react";
-import Info from "./components/Info";
-import Search from "./components/Search";
 import List from "./components/List";
+import Gameboy from "./components/Gamboy";
 
 const axios = require("axios");
-const route = "/api/";
+const route = "http://localhost:3001/api/";
 function App() {
   const [pokemon, setPokemon] = useState({
     name: "",
@@ -96,21 +95,15 @@ function App() {
 
   return (
     <div className="app">
-      <div className="gameboy-div">
-        <h1>Pokedex</h1>
-        <Search handler={changePokemon} valid={validate} />
-        <Info
-          pokemon={pokemon}
-          catchHandler={catchAndRelease}
-          changeType={changeShownType}
-          caught={caughtPokemon}
-        />
-      </div>
-      <List
-        class="types-list"
-        pokemon={shownType}
-        change={changePokemon}
+      <Gameboy
+        handler={changePokemon}
+        valid={validate}
+        pokemon={pokemon}
+        catchHandler={catchAndRelease}
+        changeType={changeShownType}
+        caught={caughtPokemon}
       />
+      <List class="types-list" pokemon={shownType} change={changePokemon} />
       <List
         class="collection-list"
         pokemon={collection}
