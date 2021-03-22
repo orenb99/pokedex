@@ -128,11 +128,11 @@
 @media screen and (max-width: 1300px) {
   .collection-list {
     left: 10vw;
-    top: 110%;
+    top: 130%;
   }
   .types-list {
     left: 10vw;
-    top: 150%;
+    top: 170%;
   }
   .list {
     width: 70vw;
