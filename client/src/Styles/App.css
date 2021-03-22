@@ -95,8 +95,9 @@
 
 .list {
   overflow: auto;
+  scroll-margin: 0 0 0 50px;
   height: 32vh;
-  width: 35vw;
+  width: 37vw;
   margin: 25px 0 25px 0;
 }
 
@@ -110,6 +111,10 @@
   border-color: black;
   border-radius: 10px;
   min-height: 69px;
+  -webkit-box-shadow: 5px 10px;
+          box-shadow: 5px 10px;
+  -webkit-box-shadow: gray;
+          box-shadow: gray;
 }
 
 .list-item:hover {

@@ -10,8 +10,9 @@
 }
 .list {
   overflow: auto;
+  scroll-margin: 0 0 0 50px;
   height: 32vh;
-  width: 35vw;
+  width: 37vw;
   margin: 25px 0 25px 0;
 }
 .list-item {
@@ -24,6 +25,8 @@
   border-color: black;
   border-radius: 10px;
   min-height: 69px;
+  box-shadow: 5px 10px;
+  box-shadow: gray;
   &:hover {
     background-color: rgb(15, 85, 235);
   }
