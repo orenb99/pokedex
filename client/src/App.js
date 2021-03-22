@@ -38,6 +38,8 @@ function App() {
       .then((res) => {
         setPokemon(res.data);
         isValid(true);
+        let audio = [...document.getElementsByClassName("audio")];
+        audio[0].play();
       })
       .catch((err) => isValid(false));
   }
@@ -104,7 +106,7 @@ function App() {
 
   return (
     <div className="app">
-      <ReactAudioPlayer className="audio" src={song} controls autoPlay />
+      <ReactAudioPlayer className="audio" src={song} controls autoPlay loop />
       <Gameboy
         handler={changePokemon}
         valid={validate}
