@@ -1,6 +1,8 @@
 import "./Styles/App.css";
 import "./Styles/fonts/font.css";
 import { useState, useEffect } from "react";
+import ReactAudioPlayer from "react-audio-player";
+import song from "./external/song.mp3";
 import List from "./components/List";
 import Gameboy from "./components/Gamboy";
 
@@ -106,6 +108,7 @@ function App() {
 
   return (
     <div className="app">
+      {/* <ReactAudioPlayer className="audio" src={song} loop /> */}
       <Gameboy
         handler={changePokemon}
         valid={validate}

@@ -1,4 +1,4 @@
-import pokeball from "../Styles/pokeball.png";
+import pokeball from "../external/pokeball.png";
 
 const Image = (props) => (
   <div className="img-div">
