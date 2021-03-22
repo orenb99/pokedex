@@ -83,18 +83,22 @@
 
 .collection-list {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
 }
 
 .types-list {
   position: absolute;
-  left: 45%;
+  left: 50%;
   top: 0%;
+}
+
+.list {
   overflow: auto;
-  height: 50vh;
-  width: 40vw;
-  margin: 50px;
+  scroll-margin: 0 0 0 50px;
+  height: 32vh;
+  width: 37vw;
+  margin: 25px 0 25px 0;
 }
 
 .list-item {
@@ -106,6 +110,15 @@
   border: solid 3px;
   border-color: black;
   border-radius: 10px;
+  min-height: 69px;
+  -webkit-box-shadow: 5px 10px;
+          box-shadow: 5px 10px;
+  -webkit-box-shadow: gray;
+          box-shadow: gray;
+}
+
+.list-item:hover {
+  background-color: #0f55eb;
 }
 
 .gameboy-div {
@@ -114,7 +127,7 @@
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
-  position: relative;
+  position: absolute;
   background-color: #d42d2d;
   width: 35vw;
   height: -webkit-fit-content;
@@ -241,12 +254,13 @@ body {
   background-color: #000058;
 }
 
-@media screen and (max-width: 1100px) {
-  body {
-    background-color: white;
-  }
+.audio {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 1300px) {
   .gameboy-div {
-    margin: 10px 25vw 10px 25vw;
+    margin: 10px 10vw 10px 10vw;
     width: 50vw;
   }
 }

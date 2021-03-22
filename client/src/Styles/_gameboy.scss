@@ -5,7 +5,7 @@
 }
 .gameboy-div {
   @include gameboyItem();
-  position: relative;
+  position: absolute;
   background-color: rgb(212, 45, 45);
   width: 35vw;
   height: fit-content;

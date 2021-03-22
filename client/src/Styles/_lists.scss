@@ -1,0 +1,33 @@
+.collection-list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+.types-list {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+}
+.list {
+  overflow: auto;
+  scroll-margin: 0 0 0 50px;
+  height: 32vh;
+  width: 37vw;
+  margin: 25px 0 25px 0;
+}
+.list-item {
+  background-color: blue;
+  text-transform: uppercase;
+  color: white;
+  margin: 5px;
+  padding: 10px;
+  border: solid 3px;
+  border-color: black;
+  border-radius: 10px;
+  min-height: 69px;
+  box-shadow: 5px 10px;
+  box-shadow: gray;
+  &:hover {
+    background-color: rgb(15, 85, 235);
+  }
+}
