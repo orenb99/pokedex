@@ -104,7 +104,7 @@ function App() {
 
   return (
     <div className="app">
-      {/* <ReactAudioPlayer className="audio" src={song} loop /> */}
+      <ReactAudioPlayer className="audio" src={song} controls autoPlay />
       <Gameboy
         handler={changePokemon}
         valid={validate}
@@ -113,11 +113,7 @@ function App() {
         changeType={changeShownType}
         caught={caughtPokemon}
       />
-      <List
-        class="types-list"
-        pokemon={shownType}
-        change={changePokemon}
-      />
+      <List class="types-list" pokemon={shownType} change={changePokemon} />
       <List
         class="collection-list"
         pokemon={collection}

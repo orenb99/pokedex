@@ -25,9 +25,25 @@
   border-color: black;
   border-radius: 10px;
   min-height: 69px;
-  box-shadow: 5px 10px;
+  box-shadow: 1px 1px;
   box-shadow: gray;
   &:hover {
     background-color: rgb(15, 85, 235);
+  }
+}
+.list-title {
+  color: white;
+}
+@media screen and(max-width:1300px) {
+  .collection-list {
+    left: 10vw;
+    top: 110%;
+  }
+  .types-list {
+    left: 10vw;
+    top: 150%;
+  }
+  .list {
+    width: 70vw;
   }
 }

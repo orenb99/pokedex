@@ -111,14 +111,32 @@
   border-color: black;
   border-radius: 10px;
   min-height: 69px;
-  -webkit-box-shadow: 5px 10px;
-          box-shadow: 5px 10px;
+  -webkit-box-shadow: 1px 1px;
+          box-shadow: 1px 1px;
   -webkit-box-shadow: gray;
           box-shadow: gray;
 }
 
 .list-item:hover {
   background-color: #0f55eb;
+}
+
+.list-title {
+  color: white;
+}
+
+@media screen and (max-width: 1300px) {
+  .collection-list {
+    left: 10vw;
+    top: 110%;
+  }
+  .types-list {
+    left: 10vw;
+    top: 150%;
+  }
+  .list {
+    width: 70vw;
+  }
 }
 
 .gameboy-div {
