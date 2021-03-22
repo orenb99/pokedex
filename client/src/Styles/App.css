@@ -1,7 +1,6 @@
 .type-span {
   position: relative;
   margin: 10px;
-  padding: 15px 10px 7px 10px;
   border-radius: 13px;
   color: white;
   border: solid black 1px;
@@ -110,19 +109,28 @@
 .gameboy-div {
   border: black 2px solid;
   border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   position: relative;
   background-color: #d42d2d;
   width: 35vw;
-  height: 80vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   text-align: center;
-  left: 10%;
+  margin: 50px;
 }
 
 .search-div {
   border: black 2px solid;
   border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   position: relative;
-  background-color: white;
+  background-color: whitesmoke;
+  min-height: 80px;
   width: 80%;
   left: 10%;
   height: 10%;
@@ -132,13 +140,78 @@
 .search-div > input {
   border: black 2px solid;
   border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   margin-right: 2%;
+  width: 50%;
 }
 
 .search-div > button {
   border: black 2px solid;
   border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   padding: 5px;
+}
+
+.img-block {
+  border: black 2px solid;
+  border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+  background-color: whitesmoke;
+  left: 10%;
+  width: 80%;
+  height: 40vh;
+  margin-top: 5%;
+}
+
+.first-info {
+  border: black 2px solid;
+  border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+  background-color: whitesmoke;
+  left: 10%;
+  width: 80%;
+  height: 8vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.first-info > h3 {
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.first-info > span {
+  position: absolute;
+}
+
+.second-info {
+  border: black 2px solid;
+  border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+  background-color: whitesmoke;
+  width: 50%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  left: 25%;
+  margin: 5% 0 5% 0;
 }
 
 body {

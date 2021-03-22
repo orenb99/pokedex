@@ -93,6 +93,15 @@ function App() {
       .catch((err) => console.log(err.message));
   }
 
+  async function getIconByType() {
+    return await Promise.all(shownType.map( async (value)=>{
+        const pokemon = await axios.get(`${route}/pokemon/${value}`)
+        // return pokemon.data.sprites.versions['generation-viii'].icons.front_default
+        console.log(pokemon);
+        return 
+    }))
+  }
+
   return (
     <div className="app">
       <Gameboy

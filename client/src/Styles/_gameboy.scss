@@ -1,31 +1,71 @@
-@mixin border {
+@mixin gameboyItem {
   border: black 2px solid;
   border-radius: 15px;
+  min-width: fit-content;
 }
-
 .gameboy-div {
-  @include border();
+  @include gameboyItem();
   position: relative;
   background-color: rgb(212, 45, 45);
   width: 35vw;
-  height: 80vh;
+  height: fit-content;
   text-align: center;
-  left: 10%;
+  margin: 50px;
 }
 .search-div {
-  @include border();
+  @include gameboyItem();
   position: relative;
-  background-color: white;
+  background-color: whitesmoke;
+  min-height: 80px;
   width: 80%;
   left: 10%;
   height: 10%;
   padding: 1% 0 1% 0;
   & > input {
-    @include border();
+    @include gameboyItem();
     margin-right: 2%;
+    width: 50%;
   }
   & > button {
-    @include border();
+    @include gameboyItem();
     padding: 5px;
   }
+}
+
+.img-block {
+  @include gameboyItem();
+  position: relative;
+  background-color: whitesmoke;
+  left: 10%;
+  width: 80%;
+  height: 40vh;
+  margin-top: 5%;
+}
+
+.first-info {
+  @include gameboyItem();
+  position: relative;
+  background-color: whitesmoke;
+  left: 10%;
+  width: 80%;
+  height: 8vh;
+  display: flex;
+  margin-top: 10%;
+  justify-content: space-around;
+  & > h3 {
+    position: absolute;
+    text-transform: uppercase;
+  }
+  & > span {
+    position: absolute;
+  }
+}
+.second-info {
+  @include gameboyItem();
+  position: relative;
+  background-color: whitesmoke;
+  width: 50%;
+  height: fit-content;
+  left: 25%;
+  margin: 5% 0 5% 0;
 }
