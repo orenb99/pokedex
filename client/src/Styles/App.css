@@ -1,7 +1,9 @@
 .type-span {
   position: relative;
-  margin: 10px;
+  margin-left: 7px;
+  padding: 15px 10px 7px 10px;
   border-radius: 13px;
+  font-size: 0.8em;
   color: white;
   border: solid black 1px;
 }
@@ -107,7 +109,7 @@
 }
 
 .gameboy-div {
-  border: black 2px solid;
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -123,32 +125,22 @@
 }
 
 .search-div {
-  border: black 2px solid;
-  border-radius: 15px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
   position: relative;
-  background-color: whitesmoke;
-  min-height: 80px;
-  width: 80%;
-  left: 10%;
-  height: 10%;
-  padding: 1% 0 1% 0;
+  min-height: 90px;
 }
 
 .search-div > input {
-  border: black 2px solid;
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   margin-right: 2%;
-  width: 50%;
+  width: 10vw;
 }
 
 .search-div > button {
-  border: black 2px solid;
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -157,7 +149,7 @@
 }
 
 .img-block {
-  border: black 2px solid;
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
@@ -170,36 +162,53 @@
   margin-top: 5%;
 }
 
-.first-info {
-  border: black 2px solid;
+.info-img {
+  position: absolute;
+  left: 5%;
+  width: 70%;
+}
+
+.catch-button {
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;
   position: relative;
+  background-color: green;
+  top: 80%;
+  left: 50%;
+  border-radius: 50%;
+  padding: 6% 1% 6% 1%;
+}
+
+.first-info {
+  border: black 2.5px solid;
+  border-radius: 15px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  position: relative;
+  min-height: 120px;
   background-color: whitesmoke;
   left: 10%;
   width: 80%;
   height: 8vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   margin-top: 10%;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
 .first-info > h3 {
-  position: absolute;
+  position: relative;
   text-transform: uppercase;
 }
 
 .first-info > span {
-  position: absolute;
+  position: relative;
+  top: 20%;
 }
 
 .second-info {
-  border: black 2px solid;
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;

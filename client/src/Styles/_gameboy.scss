@@ -1,5 +1,7 @@
+//@import "_pokeball.scss";
+
 @mixin gameboyItem {
-  border: black 2px solid;
+  border: black 2.5px solid;
   border-radius: 15px;
   min-width: fit-content;
 }
@@ -13,18 +15,12 @@
   margin: 50px;
 }
 .search-div {
-  @include gameboyItem();
   position: relative;
-  background-color: whitesmoke;
-  min-height: 80px;
-  width: 80%;
-  left: 10%;
-  height: 10%;
-  padding: 1% 0 1% 0;
+  min-height: 90px;
   & > input {
     @include gameboyItem();
     margin-right: 2%;
-    width: 50%;
+    width: 10vw;
   }
   & > button {
     @include gameboyItem();
@@ -41,23 +37,37 @@
   height: 40vh;
   margin-top: 5%;
 }
+.info-img {
+  position: absolute;
+  left: 5%;
+  width: 70%;
+}
+.catch-button {
+  @include gameboyItem();
+  position: relative;
+  background-color: green;
+  top: 80%;
+  left: 50%;
+  border-radius: 50%;
+  padding: 6% 1% 6% 1%;
+}
 
 .first-info {
   @include gameboyItem();
   position: relative;
+  min-height: 120px;
   background-color: whitesmoke;
   left: 10%;
   width: 80%;
   height: 8vh;
-  display: flex;
   margin-top: 10%;
-  justify-content: space-around;
   & > h3 {
-    position: absolute;
+    position: relative;
     text-transform: uppercase;
   }
   & > span {
-    position: absolute;
+    position: relative;
+    top: 20%;
   }
 }
 .second-info {
