@@ -163,23 +163,31 @@
 }
 
 .info-img {
-  position: absolute;
+  position: relative;
   left: 5%;
   width: 70%;
 }
 
 .catch-button {
-  border: black 2.5px solid;
-  border-radius: 15px;
-  min-width: -webkit-fit-content;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  position: relative;
-  background-color: green;
-  top: 80%;
+  position: absolute;
+  top: 95%;
+  z-index: 2;
   left: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.catch-button:hover {
+  cursor: pointer;
+  border: black solid 2px;
   border-radius: 50%;
-  padding: 6% 1% 6% 1%;
+}
+
+.catch-button:active {
+  top: 94%;
+  left: 49%;
+  width: 60px;
+  height: 60px;
 }
 
 .first-info {

@@ -1,3 +1,5 @@
+import pokeball from "../Styles/pokeball.png";
+
 const Image = (props) => (
   <div className="img-div">
     <img
@@ -7,14 +9,14 @@ const Image = (props) => (
       src={props.front}
       alt=""
     />
-    <button
+    <img
+      src={pokeball}
+      alt={props.caught(props.name)}
       className="catch-button"
       onClick={(e) => {
         props.catch();
       }}
-    >
-      {props.caught(props.name)}
-    </button>
+    />
   </div>
 );
 
