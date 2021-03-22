@@ -106,7 +106,7 @@ function App() {
 
   return (
     <div className="app">
-      <ReactAudioPlayer className="audio" src={song} controls autoPlay loop />
+      <ReactAudioPlayer className="audio" src={song} autoPlay loop />
       <Gameboy
         handler={changePokemon}
         valid={validate}
